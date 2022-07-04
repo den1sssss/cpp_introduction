@@ -6,7 +6,7 @@
 #    By: dshirely <dshirely@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/03 16:53:18 by dshirely          #+#    #+#              #
-#    Updated: 2022/07/03 16:53:19 by dshirely         ###   ########.fr        #
+#    Updated: 2022/07/04 15:34:27 by dshirely         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,11 +18,11 @@ OBJS 	= $(SRCS:.cpp=.o)
 
 CC 		= clang++
 RM		= rm -rf
-CFLAGS	= -Wall -Werror -Wextra -g -std=c++98
+CFLAGS	= -Wall -Werror -Wextra -std=c++98
 
 
 all:
-	@$(MAKE) $(NAME) -j4
+	@$(MAKE) $(NAME) 
 
 %.o:    %.cpp
 	@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@

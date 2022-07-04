@@ -6,7 +6,7 @@
 /*   By: dshirely <dshirely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 16:53:21 by dshirely          #+#    #+#             */
-/*   Updated: 2022/07/03 16:53:22 by dshirely         ###   ########.fr       */
+/*   Updated: 2022/07/04 17:41:49 by dshirely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int main(int argc, char **argv)
 			}
 			i++;
 		}
+		std::cout << std::endl;
 	}
 	else
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
