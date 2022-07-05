@@ -6,7 +6,7 @@
 #    By: dshirely <dshirely@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/03 16:53:18 by dshirely          #+#    #+#              #
-#    Updated: 2022/07/04 15:34:27 by dshirely         ###   ########.fr        #
+#    Updated: 2022/07/05 16:45:25 by dshirely         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ SRCS	= ./megaphone.cpp
 
 OBJS 	= $(SRCS:.cpp=.o)
 
-CC 		= clang++
+CC 		= c++
 RM		= rm -rf
 CFLAGS	= -Wall -Werror -Wextra -std=c++98
 

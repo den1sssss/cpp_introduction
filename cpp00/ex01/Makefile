@@ -6,33 +6,33 @@
 #    By: dshirely <dshirely@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/03 16:53:23 by dshirely          #+#    #+#              #
-#    Updated: 2022/07/04 15:34:31 by dshirely         ###   ########.fr        #
+#    Updated: 2022/07/05 18:42:07 by dshirely         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME 	= megaphone
+CFLAGS		= -Wall -Wextra -Werror -std=c++98
+CC			= c++
+RM			= rm -f
+OBJ			= ${SRC:.cpp=.o}
+SRC			= main.cpp PhoneBook.cpp Contact.cpp
+INC			= main.hpp PhoneBook.hpp Contact.hpp
 
-SRCS	= ./megaphone.cpp
+NAME		= phonebook
 
-OBJS 	= $(SRCS:.cpp=.o)
+${NAME}:	${OBJ}
+					${CC} ${CFLAGS} ${OBJ} -o $@
 
-CC 		= clang++
-RM		= rm -rf
-CFLAGS	= -Wall -Werror -Wextra -std=c++98
+%.o:%.cpp ${INC}
+					${CC} ${CFLAGS} -c $< -o $@
 
+all:			${NAME}
 
-all:
-	@$(MAKE) $(NAME) -j4
-
-%.o:    %.cpp
-	@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
-
-$(NAME):	$(OBJS)
-	@$(CC) $(OBJS) -o $(NAME)
 clean:
-	@$(RM) $(OBJS)
+					${RM} ${OBJ}
 
-fclean: clean
-	@$(RM) $(NAME)
+fclean:		clean
+					${RM} ${NAME}
 
-re:	fclean $(NAME)
+re: 			fclean all
+
+.PHONY : 	all clean fclean re

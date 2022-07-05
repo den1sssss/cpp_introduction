@@ -2,6 +2,7 @@
 
 int	main(void)
 {
+	PhoneBook phonebook;
 	std::string	str;
 
 	std::cout << "Welcome to your PhoneBook!" << std::endl;
@@ -13,13 +14,27 @@ int	main(void)
 		std::cout << "> ";
 		getline(std::cin, str);
 		if (str == "ADD")
-			// phonebok.contact_add();
-			std::cout << "DOBAVIL" << std::endl;
+			phonebook.add();
 		else if (str == "SEARCH")
-			// phonebook.contacts_search();
-			std::cout << "NAWEL" << std::endl;
-		else if (str != "EXIT")
-			std::cout << "I DON'T GET IT!" << std::endl;
+		{
+			if(phonebook.search())
+				{
+					std::cout << "CHOOSE CONTACT ID: " << std::endl;
+					std::cin >> str;
+					try
+					{
+						phonebook.view_contact(std::stoi(str));
+					}
+					catch(...)
+					{
+						std::cout << "INCORRECT INDEX" << std::endl;
+					}
+				}
+		}
+		else if (str == "EXIT")
+			break;
+		else
+			std::cout << "(ADD, SEARCH, EXIT)" << std::endl;
 	}
 	std::cout << "GOODBYE" << std::endl;
 	return (0);

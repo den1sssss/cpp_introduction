@@ -6,6 +6,4 @@
 # include "Contact.hpp"
 # include "PhoneBook.hpp"
 
-# define COLUMN_SIZE 10
-
 #endif
