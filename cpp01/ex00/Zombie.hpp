@@ -2,19 +2,17 @@
 #define ZOMBIE_H
 
 #include <string>
+#include <iostream>
 
 class Zombie
 {
 	public:
-	// Contact(std::string first_name = "", std::string last_name = "",\
-	// std::string nickname = "", std::string phone_number = "", std::string darkest_secret = "");
-
-	// std::string get_first_name();
-	// std::string get_last_name();
-	// std::string get_nickname();
-	// std::string get_phone_number();
-	// std::string get_darkest_secret();
+		Zombie(std::string _name);
+		// void set_name(std::string name);
 		void announce(void);
+		void randomChump(std::string name);
+		Zombie *newZombie(std::string name);
+		void killZombie(void);
 private:
 	std::string _name;
 };
