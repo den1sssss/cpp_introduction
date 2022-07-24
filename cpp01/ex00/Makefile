@@ -6,7 +6,7 @@
 #    By: dshirely <dshirely@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/05 20:17:38 by dshirely          #+#    #+#              #
-#    Updated: 2022/07/05 20:27:46 by dshirely         ###   ########.fr        #
+#    Updated: 2022/07/22 19:09:56 by dshirely         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ CFLAGS		= -Wall -Wextra -Werror -std=c++98
 CC			= c++
 RM			= rm -f
 OBJ			= ${SRC:.cpp=.o}
-SRC			= main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
+SRC			= main.cpp Zombie.cpp 
 INC			= Zombie.hpp
 
 NAME		= zombie
