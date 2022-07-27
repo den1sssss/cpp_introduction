@@ -14,9 +14,15 @@
 
 int main(void)
 {
+	Zombie test("test");
 	Zombie zombie("Denis");
 	Zombie zombie1("Andrew");
-	zombie1.randomChump("Chuck");
+	Zombie *zom;
+	zom = zombie.newZombie("aa");
+	zom->announce();
+	delete zom;
+	zombie1.randomChump("Anton");
 	zombie.~Zombie();
 	zombie.announce();
+	test.announce();
 }

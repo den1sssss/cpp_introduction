@@ -1,4 +1,4 @@
-CFLAGS		= -Wall -Wextra -Werror -std=c++11 #CHANGE VERSION TO 98!!!
+CFLAGS		= -Wall -Wextra -Werror -std=c++98
 CC			= c++
 RM			= rm -f
 OBJ			= ${SRC:.cpp=.o}
