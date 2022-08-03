@@ -14,7 +14,6 @@
 
 int main(void)
 {
-	// int i = 0;
 	Zombie *zombies;
 
 	zombies = zombieHorde(5,"Denis");
