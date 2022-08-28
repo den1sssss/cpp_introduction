@@ -19,7 +19,8 @@ Fixed::~Fixed()
 
 Fixed & Fixed::operator=(const Fixed &a)
 {
-    std::cout << "Assignation operator called" << std::endl;
+    // std::cout << "Assignation operator called" << std::endl;
+    std::cout << "Copy assigment operator called" << std::endl;
     if (this == &a)
         return (*this);
     this->value = a.getRawBits();
