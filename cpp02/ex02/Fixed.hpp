@@ -9,8 +9,12 @@ class Fixed
     public:
 
         Fixed();
-        ~Fixed();
-        
+        Fixed(const Fixed &a);
+        Fixed(const int a);
+        Fixed(const float a);
+        virtual ~Fixed();
+        Fixed &operator=(const Fixed& op);
+
         bool operator>(Fixed const & op) const;    
         bool operator<(Fixed const & op) const;    
         bool operator>=(Fixed const & op) const;    
@@ -34,6 +38,12 @@ class Fixed
         Fixed & operator--(void);     
         Fixed operator--(int);
 
+        static Fixed &min(Fixed &a, Fixed &b);
+        const static Fixed &min(const Fixed &a, const Fixed &b);
+        static Fixed &max(Fixed &a, Fixed &b);
+        const static Fixed &max(const Fixed &a, const Fixed &b);
+
+
 
     private:
         int value;
@@ -41,6 +51,8 @@ class Fixed
 
 };
 
+Fixed &min(Fixed &a, Fixed &b);
+Fixed &max(Fixed &a, Fixed &b);
 std::ostream &operator<<(std::ostream &stream, Fixed const &number);
 
 
