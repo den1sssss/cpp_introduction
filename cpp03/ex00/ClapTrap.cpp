@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: denis <denis@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/02 13:24:40 by denis             #+#    #+#             */
+/*   Updated: 2022/09/02 13:29:21 by denis            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap()
@@ -10,7 +22,7 @@ ClapTrap::~ClapTrap()
 
 }
 
-ClapTrap::ClapTrap(std::string name): _name(name), _hp(10), _mana(10), _damage(1)
+ClapTrap::ClapTrap(std::string name): _name(name), _hp(10), _mana(10), _damage(0)
 {
 
 }

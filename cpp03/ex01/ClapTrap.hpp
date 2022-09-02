@@ -6,7 +6,7 @@
 /*   By: denis <denis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/01 16:15:08 by denis             #+#    #+#             */
-/*   Updated: 2022/09/02 13:26:09 by denis            ###   ########.fr       */
+/*   Updated: 2022/09/02 13:49:57 by denis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 class ClapTrap
 {
-    private:
+    protected:
         std::string _name;
         int _hp;
         int _mana;
