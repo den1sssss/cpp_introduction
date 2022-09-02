@@ -7,10 +7,10 @@ ClapTrap::ClapTrap()
 
 ClapTrap::~ClapTrap()
 {
-    
+
 }
 
-ClapTrap::ClapTrap(std::string name): _name(name), _hp(10), _mana(10), _damage(0)
+ClapTrap::ClapTrap(std::string name): _name(name), _hp(10), _mana(10), _damage(1)
 {
 
 }
@@ -31,16 +31,20 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &arg)
 
 void ClapTrap::attack(const std::string & target)
 {
-
+    if(_hp > 0 && _mana > 0)
+        std::cout << "ClapTrap " << _name  << " attacks " << target << " ,causig " << _damage << " points of damage!" << std::endl;
+    _mana--;
 }
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
-
+    _hp -= amount;
+    std::cout << "ClapTrap " << _name << " took a " << amount << " of damage!" << std::endl;
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
-
+    _hp += amount;
+    std::cout << "ClapTrap " << _name << " repaired a " << amount << " hitPoints!" << std::endl;
 }
 
