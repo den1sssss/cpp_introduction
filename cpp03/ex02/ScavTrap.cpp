@@ -10,7 +10,7 @@ ScavTrap::ScavTrap() : ClapTrap("ScavTrap")
 
 ScavTrap::~ScavTrap()
 {
-    std::cout << "Destructr called!" << std::endl;
+    std::cout << "Destructor called!" << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &src)

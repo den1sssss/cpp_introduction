@@ -2,8 +2,8 @@ CFLAGS		= -Wall -Wextra -Werror -std=c++98
 CC			= c++
 RM			= rm -f
 OBJ			= ${SRC:.cpp=.o}
-SRC			= main.cpp ClapTrap.cpp ScavTrap.cpp
-INC			= ClapTrap.hpp ScavTrap.hpp
+SRC			= main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
+INC			= ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
 
 NAME		= ClapTrap
 

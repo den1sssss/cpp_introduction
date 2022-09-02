@@ -32,19 +32,22 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &arg)
 void ClapTrap::attack(const std::string & target)
 {
     if(_hp > 0 && _mana > 0)
-        std::cout << "ClapTrap " << _name  << " attacks " << target << " ,causig " << _damage << " points of damage!" << std::endl;
+        std::cout << "ClapTrap " << _name  << " attacks " << target << ", causig " << _damage << " points of damage!" << std::endl;
     _mana--;
 }
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
     _hp -= amount;
-    std::cout << "ClapTrap " << _name << " took a " << amount << " of damage!" << std::endl;
+    std::cout << "ClapTrap " << _name << " took " << amount << " damage!" << std::endl;
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
-    _hp += amount;
-    std::cout << "ClapTrap " << _name << " repaired a " << amount << " hitPoints!" << std::endl;
+    // _hp += amount;
+    if(_hp > 0 && _mana > 0)
+        _hp += amount;
+    std::cout << "ClapTrap " << _name << " repaired " << amount << " HP!" << std::endl;
+    _mana--;
 }
 
