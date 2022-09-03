@@ -3,6 +3,7 @@
         "__locale": "cpp",
         "bitset": "cpp",
         "system_error": "cpp",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "ostream": "cpp"
     }
 }
