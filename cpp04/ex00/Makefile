@@ -2,10 +2,10 @@ CFLAGS		= -Wall -Wextra -Werror -std=c++98
 CC			= c++
 RM			= rm -f
 OBJ			= ${SRC:.cpp=.o}
-SRC			= main.cpp 
-INC			= 
+SRC			= main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp
+INC			= Animal.hpp Cat.hpp Dog.hpp WrongAnimal.hpp WrongCat.hpp
 
-NAME		= ClapTrap
+NAME		= Animal
 
 ${NAME}:	${OBJ}
 					${CC} ${CFLAGS} ${OBJ} -o $@
