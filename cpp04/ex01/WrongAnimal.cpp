@@ -24,10 +24,10 @@ WrongAnimal & WrongAnimal::operator=(const WrongAnimal &arg)
     return(*this);
 }
 
-// std::string WrongAnimal::getType() const
-// {
-//     return type;
-// }
+std::string WrongAnimal::getType() const
+{
+    return type;
+}
 
 void WrongAnimal::makeSound() const
 {
