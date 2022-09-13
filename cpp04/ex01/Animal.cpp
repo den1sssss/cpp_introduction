@@ -6,7 +6,7 @@
 /*   By: dshirely <dshirely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 17:38:22 by dshirely          #+#    #+#             */
-/*   Updated: 2022/09/07 15:44:56 by dshirely         ###   ########.fr       */
+/*   Updated: 2022/09/13 17:56:00 by dshirely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,3 +45,8 @@ void Animal::makeSound() const
 {
     std::cout << "I`m not a cat or dog. I`m just an Animal!"<<std::endl;
 }
+
+// Brain *Animal::getBrain() const
+// {
+    
+// }
