@@ -30,7 +30,14 @@ Cat & Cat::operator=(const Cat &arg)
 // {
     // return type;
 // }
+
 void Cat::makeSound() const
 {
     std::cout << "meow!"<<std::endl;
 }
+
+Brain *Cat::getBrain() const
+{
+    return this->brain;
+}
+
