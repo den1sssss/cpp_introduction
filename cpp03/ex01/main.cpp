@@ -1,13 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dshirely <dshirely@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/18 16:57:15 by dshirely          #+#    #+#             */
+/*   Updated: 2022/09/18 16:57:16 by dshirely         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 
 int main()
 {
-	ClapTrap A("Denis");
-	ClapTrap B("Danya");
+	ClapTrap A("ClapTrap");
+	ScavTrap B;
 
-	A.attack("TARGET A");
-	B.attack("TARGET B");
+	B.guardGate();
+
+	A.attack("ScavTrap");
+	B.attack("ClapTrap");
 
 	A.takeDamage(5);
 	B.takeDamage(8);
@@ -15,22 +29,11 @@ int main()
 	A.beRepaired(1);
 	B.beRepaired(6);
 
-	A.takeDamage(5);
-	B.takeDamage(11);
+	A.attack("ScavTrap");
+	B.attack("ClapTrap");
 
-	A.beRepaired(10);
-	B.beRepaired(15);
-
-	A.beRepaired(10);
-	A.beRepaired(10);
-	A.beRepaired(10);
-	A.beRepaired(10);
-	A.beRepaired(10);
-	A.beRepaired(10);
-
-	A.takeDamage(5);
-	A.attack("TARGET A");
-	A.attack("TARGET A");
+	A.takeDamage(100);
+	B.takeDamage(8);
 
 	return 0;
 }

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dshirely <dshirely@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/18 16:57:46 by dshirely          #+#    #+#             */
+/*   Updated: 2022/09/18 16:57:47 by dshirely         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <iostream>
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
@@ -6,57 +18,27 @@
 int main()
 {
 
-	ClapTrap A;
-	ClapTrap B("ClapTrap");
-	ScavTrap R;
-	FragTrap F("FragTrap");
+	ClapTrap A("ClapTrap");
+	ScavTrap B;
+	FragTrap C("FragTrap");
 
-	// A.setAttackDamage(4);
-	// B.setAttackDamage(7);
-	R.guardGate();
-	F.highFivesGuys();
+	B.guardGate();
+	C.highFivesGuys();
 
-	A.attack("TARGET A");
-	B.attack("TARGET B");
-	R.attack("TARGET R");
-	F.attack("TARGET F");
+	A.attack("ScavTrap");
+	B.attack("ClapTrap");
 
 	A.takeDamage(5);
 	B.takeDamage(8);
-	R.takeDamage(7);
-	F.takeDamage(21);
-
-
-	A.beRepaired(1);
-	B.beRepaired(6);
-	R.beRepaired(10);
-	F.beRepaired(42);
-
-	A.takeDamage(5);
-	B.takeDamage(11);
-	R.takeDamage(50);
 
 	A.beRepaired(10);
-	B.beRepaired(15);
+	B.beRepaired(60);
 
-	A.beRepaired(10);
-	A.beRepaired(10);
-	A.beRepaired(10);
-	A.beRepaired(10);
-	A.beRepaired(10);
-	A.beRepaired(10);
+	A.attack("ScavTrap");
+	B.attack("ClapTrap");
 
-	A.takeDamage(5);
-	F.takeDamage(200);
-	A.attack("TARGET A");
-	A.attack("TARGET A");
-
-	R.attack("TARGET R");
-	R.attack("TARGET R");
-	R.attack("TARGET R");
-	R.attack("TARGET R");
-	F.beRepaired(400);
-	F.attack("TARGET F");
+	A.takeDamage(100);
+	B.takeDamage(200);
 
 	return 0;
 }

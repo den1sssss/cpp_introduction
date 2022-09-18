@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: dshirely <dshirely@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/09/18 16:57:49 by dshirely          #+#    #+#              #
+#    Updated: 2022/09/18 16:57:50 by dshirely         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 CFLAGS		= -Wall -Wextra -Werror -std=c++98
 CC			= c++
 RM			= rm -f
@@ -5,7 +17,7 @@ OBJ			= ${SRC:.cpp=.o}
 SRC			= main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 INC			= ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
 
-NAME		= ClapTrap
+NAME		= FragTrap
 
 ${NAME}:	${OBJ}
 					${CC} ${CFLAGS} ${OBJ} -o $@

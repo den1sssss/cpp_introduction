@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dshirely <dshirely@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/18 16:57:51 by dshirely          #+#    #+#             */
+/*   Updated: 2022/09/18 16:57:52 by dshirely         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ScavTrap.hpp"
 
 ScavTrap::ScavTrap() : ClapTrap("ScavTrap")
@@ -5,18 +17,18 @@ ScavTrap::ScavTrap() : ClapTrap("ScavTrap")
     _hp = 100;
     _mana = 50;
     _damage = 20;
-    std::cout << _name << " ScavTrap constructor called!" << std::endl;
+    std::cout << " ScavTrap constructor called!" << std::endl;
 }
 
 ScavTrap::~ScavTrap()
 {
-    std::cout << "Destructor called!" << std::endl;
+    std::cout << "ScavTrap destructor called!" << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &src)
 {
     *this = src;
-    std::cout << "Copy constructor called" << std::endl;
+    std::cout << "ScavTrap Copy constructor called" << std::endl;
 }
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &newValue)
