@@ -12,9 +12,9 @@
 
 #include "Animal.hpp"
 
-Animal::Animal()
+Animal::Animal() : type("Animal")
 {
-    std::cout << "Animal constructor" << std::endl;
+    std::cout << "Animal default constructor" << std::endl;
 }
 
 Animal::~Animal()
@@ -30,15 +30,16 @@ Animal::Animal(const Animal &src)
 
 Animal & Animal::operator=(const Animal &arg)
 {
-    if(this != &arg)
-        this->type=arg.type;
+    // if(this != &arg)
+    //     this->type=arg.type;
+    this->type=arg.getType();
     std::cout <<"Animal copy assigment operator" << type << std::endl;
     return(*this);
 }
 
 std::string Animal::getType() const
 {
-    return type;
+    return (this->type);
 }
 
 void Animal::makeSound() const

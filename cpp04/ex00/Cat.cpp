@@ -4,7 +4,7 @@
 Cat::Cat()
 {
     type = "Cat";
-    std::cout << "Cat constructor" << std::endl;
+    std::cout << "Cat default constructor" << std::endl;
 }
 
 Cat::~Cat()
@@ -20,8 +20,9 @@ Cat::Cat(const Cat &src)
 
 Cat & Cat::operator=(const Cat &arg)
 {
-    if(this != &arg)
-        this->type=arg.type;
+    // if(this != &arg)
+    //     this->type=arg.type;
+    this->type=arg.getType();
     std::cout <<"Cat copy assigment operator" << type << std::endl;
     return(*this);
 }

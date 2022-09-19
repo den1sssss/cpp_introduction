@@ -4,7 +4,7 @@
 Dog::Dog()
 {
     type = "Dog";
-    std::cout << "Dog constructor" << std::endl;
+    std::cout << "Dog default constructor" << std::endl;
 }
 
 Dog::~Dog()
@@ -20,8 +20,9 @@ Dog::Dog(const Dog &src)
 
 Dog & Dog::operator=(const Dog &arg)
 {
-    if(this != &arg)
-        this->type=arg.type;
+    // if(this != &arg)
+    //     this->type=arg.type;
+    this->type=arg.getType();
     std::cout <<"Dog copy assigment operator" << this->type << std::endl;
     return(*this);
 }

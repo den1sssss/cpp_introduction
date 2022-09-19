@@ -6,7 +6,7 @@
 /*   By: dshirely <dshirely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 17:38:20 by dshirely          #+#    #+#             */
-/*   Updated: 2022/09/13 17:55:16 by dshirely         ###   ########.fr       */
+/*   Updated: 2022/09/06 17:39:17 by dshirely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #define ANIMAL_HPP
 
 #include <iostream>
-#include "Brain.hpp"
 
 class Animal
 {
@@ -22,12 +21,11 @@ class Animal
         std::string type;
     public:
         Animal();
-        ~Animal();
+        virtual ~Animal(void);
         Animal(const Animal &src);
         Animal &operator=(const Animal &arg);    
         std::string getType() const;
         virtual void makeSound() const;
-        virtual Brain *getBrain() const = 0;
 };
 
 #endif

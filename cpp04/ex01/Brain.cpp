@@ -2,7 +2,7 @@
 
 Brain::Brain()
 {
-    std::cout << "Brain constructor" << std::endl;
+    std::cout << "Brain deafult constructor" << std::endl;
 }
 Brain::~Brain()
 {
@@ -10,6 +10,7 @@ Brain::~Brain()
 }
 Brain::Brain(const Brain &src)
 {
+    *this = src;
     std::cout << "Brain copy constructor" << std::endl;
 }
 Brain &Brain::operator=(const Brain &a)

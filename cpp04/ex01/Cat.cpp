@@ -4,24 +4,31 @@
 Cat::Cat()
 {
     type = "Cat";
-    std::cout << "Cat constructor" << std::endl;
+    this->CatBrain = new Brain();
+    std::cout << "Cat default constructor" << std::endl;
 }
 
 Cat::~Cat()
 {
+    delete this->CatBrain;
     std::cout << "Cat destructor" << std::endl;
 }
 
 Cat::Cat(const Cat &src)
 {
     *this = src;
+    this->CatBrain=new Brain();
+    *(this->CatBrain)=*(src.CatBrain);
     std::cout << "Cat copy constructor"<< std::endl;
 }
 
 Cat & Cat::operator=(const Cat &arg)
 {
-    if(this != &arg)
-        this->type=arg.type;
+    // if(this != &arg)
+    //     this->type=arg.type;
+    this->type=arg.getType();
+    this->CatBrain = new Brain();
+    *(this->CatBrain) = *(arg.CatBrain);
     std::cout <<"Cat copy assigment operator" << type << std::endl;
     return(*this);
 }
@@ -30,14 +37,7 @@ Cat & Cat::operator=(const Cat &arg)
 // {
     // return type;
 // }
-
 void Cat::makeSound() const
 {
     std::cout << "meow!"<<std::endl;
 }
-
-Brain *Cat::getBrain() const
-{
-    return this->brain;
-}
-

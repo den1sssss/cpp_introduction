@@ -4,7 +4,7 @@
 WrongCat::WrongCat()
 {
     type = "WrongCat";
-    std::cout << "WrongCat constructor" << std::endl;
+    std::cout << "WrongCat default constructor" << std::endl;
 }
 
 WrongCat::~WrongCat()
@@ -20,8 +20,9 @@ WrongCat::WrongCat(const WrongCat &src)
 
 WrongCat & WrongCat::operator=(const WrongCat &arg)
 {
-    if(this != &arg)
-        this->type=arg.type;
+    // if(this != &arg)
+    //     this->type=arg.type;
+    this->type=arg.getType();
     std::cout <<"WrongCat copy assigment operator" << type << std::endl;
     return(*this);
 }
@@ -32,5 +33,5 @@ WrongCat & WrongCat::operator=(const WrongCat &arg)
 // }
 void WrongCat::makeSound() const
 {
-    std::cout << "meow!"<<std::endl;
+    std::cout << "Cat's wrong sound!"<<std::endl;
 }

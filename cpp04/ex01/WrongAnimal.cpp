@@ -1,8 +1,8 @@
 #include "WrongAnimal.hpp"
 
-WrongAnimal::WrongAnimal()
+WrongAnimal::WrongAnimal(): type("WrongAnimal")
 {
-    std::cout << "WrongAnimal constructor" << std::endl;
+    std::cout << "WrongAnimal default constructor" << std::endl;
 }
 
 WrongAnimal::~WrongAnimal()
@@ -18,8 +18,9 @@ WrongAnimal::WrongAnimal(const WrongAnimal &src)
 
 WrongAnimal & WrongAnimal::operator=(const WrongAnimal &arg)
 {
-    if(this != &arg)
-        this->type=arg.type;
+    // if(this != &arg)
+    //     this->type=arg.type;
+    this->type=arg.getType();
     std::cout <<"WrongAnimal copy assigment operator" << std::endl;
     return(*this);
 }

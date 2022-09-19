@@ -21,7 +21,7 @@ class Animal
         std::string type;
     public:
         Animal();
-        ~Animal();
+        virtual ~Animal(void);
         Animal(const Animal &src);
         Animal &operator=(const Animal &arg);    
         std::string getType() const;
