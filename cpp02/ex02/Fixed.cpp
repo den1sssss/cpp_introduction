@@ -109,11 +109,13 @@ Fixed Fixed::operator/(Fixed const & op) const
 
 Fixed &Fixed::operator++(void)
 {
+        std::cout << "b" << std::endl;
     setRawBits(++value);
     return(*this);
 }
 Fixed Fixed::operator++(int)
 {
+    std::cout << "a" << std::endl;
     Fixed a(*this);
     setRawBits(++value);
     return(a);

@@ -17,12 +17,12 @@ ScavTrap::ScavTrap() : ClapTrap("ScavTrap")
     _hp = 100;
     _mana = 50;
     _damage = 20;
-    std::cout << " ScavTrap constructor called!" << std::endl;
+    std::cout << " ScavTrap Constructor called!" << std::endl;
 }
 
 ScavTrap::~ScavTrap()
 {
-    std::cout << "ScavTrap destructor called!" << std::endl;
+    std::cout << "ScavTrap Destructor called!" << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &src)

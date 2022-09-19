@@ -31,7 +31,6 @@ Fixed::~Fixed()
 
 Fixed & Fixed::operator=(Fixed const &a)
 {
-    // std::cout << "Assignation operator called" << std::endl;
     std::cout << "Copy assigment operator called" << std::endl;
     if (this == &a)
         return (*this);
@@ -58,7 +57,7 @@ float Fixed::toFloat() const
 
 int Fixed::toInt(void) const
 {
-    return(value >> 8);
+    return(value >> this->fractBits);
 }
 
 Fixed::Fixed(const int num)

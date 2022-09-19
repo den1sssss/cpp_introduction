@@ -14,7 +14,7 @@
 
 ClapTrap::ClapTrap()
 {
-    std::cout << "Constructor called!" << std::endl;
+    std::cout << "Default Constructor called!" << std::endl;
 }
 
 ClapTrap::~ClapTrap()
@@ -29,11 +29,13 @@ ClapTrap::ClapTrap(std::string name): _name(name), _hp(10), _mana(10), _damage(0
 
 ClapTrap::ClapTrap(const ClapTrap &arg)
 {
+    std::cout << "ClapTrap Copy constructor called" << std::endl;
     *this = arg;
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &arg)
 {
+    std::cout << "Copy assigment operator called" << std::endl;
 	_name = arg._name;
 	_hp = arg._hp;
 	_mana = arg._mana;
