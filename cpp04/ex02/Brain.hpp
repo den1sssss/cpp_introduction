@@ -3,7 +3,7 @@
 
 # include <iostream>
 #include "Brain.hpp"
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 
 class Brain
 {
