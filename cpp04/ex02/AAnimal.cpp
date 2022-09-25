@@ -12,37 +12,35 @@
 
 #include "AAnimal.hpp"
 
-Animal::Animal() : type("Animal")
+AAnimal::AAnimal() : type("AAnimal")
 {
-    std::cout << "Animal default constructor" << std::endl;
+    std::cout << "AAnimal default constructor" << std::endl;
 }
 
-Animal::~Animal()
+AAnimal::~AAnimal()
 {
-    std::cout << "Animal destructor" << std::endl;
+    std::cout << "AAnimal destructor" << std::endl;
 }
 
-Animal::Animal(const Animal &src)
+AAnimal::AAnimal(const AAnimal &src)
 {
     *this = src;
-    std::cout << "Animal copy constructor"<< std::endl;
+    std::cout << "AAnimal copy constructor"<< std::endl;
 }
 
-Animal & Animal::operator=(const Animal &arg)
+AAnimal & AAnimal::operator=(const AAnimal &arg)
 {
-    // if(this != &arg)
-    //     this->type=arg.type;
     this->type=arg.getType();
-    std::cout <<"Animal copy assigment operator" << type << std::endl;
+    std::cout <<"AAnimal copy assigment operator" << type << std::endl;
     return(*this);
 }
 
-std::string Animal::getType() const
+std::string AAnimal::getType() const
 {
     return (this->type);
 }
 
-void Animal::makeSound() const
+void AAnimal::makeSound() const
 {
-    std::cout << "I`m not a cat or dog. I`m just an Animal!"<<std::endl;
+    std::cout << "I`m not a cat or dog. I`m just an AAnimal!"<<std::endl;
 }

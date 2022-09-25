@@ -1,4 +1,15 @@
-// #include "Animal.hpp"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dshirely <dshirely@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/25 16:24:11 by dshirely          #+#    #+#             */
+/*   Updated: 2022/09/25 16:24:12 by dshirely         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Cat.hpp"
 
 Cat::Cat()
@@ -20,17 +31,11 @@ Cat::Cat(const Cat &src)
 
 Cat & Cat::operator=(const Cat &arg)
 {
-    // if(this != &arg)
-    //     this->type=arg.type;
     this->type=arg.getType();
     std::cout <<"Cat copy assigment operator" << type << std::endl;
     return(*this);
 }
 
-// std::string Cat::getType() const
-// {
-    // return type;
-// }
 void Cat::makeSound() const
 {
     std::cout << "meow!"<<std::endl;

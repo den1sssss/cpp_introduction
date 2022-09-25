@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dshirely <dshirely@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/25 16:25:16 by dshirely          #+#    #+#             */
+/*   Updated: 2022/09/25 16:25:18 by dshirely         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "AAnimal.hpp"
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
@@ -7,42 +19,19 @@
 
 int main(void)
 {
-	// My test
-	std::cout << "---- My test ----" << std::endl;
-	Animal	*tab_animal[10];
-	int		i;
-	i = -1;
-	while (++i < 10)
-	{
-		if (i % 2)
-			tab_animal[i] = new Dog();
-		else
-			tab_animal[i] = new Cat();
-		std::cout << std::endl;
-	}
-	i--;
-	std::cout << std::endl;
-	while (i >= 0)
-	{
-		delete tab_animal[i];
-		i--;
-		std::cout << std::endl;
-	}
-	std::cout << std::endl;
-	
-	// Deep Copy Test
-	std::cout << "---- Deep copy test ----" << std::endl;
-	Dog		basic;
-	Dog tmp = basic;
+	AAnimal*	 Persik = new Dog();
 	std::cout << std::endl;
 
-	// Subject test
-	std::cout << "---- Subject test ----" << std::endl;
-	const Animal* j = new Dog();
-	const Animal* k = new Cat();
+	AAnimal*	Murka = new Cat();
 	std::cout << std::endl;
-	
-	delete j;
-	delete k;
+
+	Persik->makeSound();
+	std::cout << std::endl;
+
+	Murka->makeSound();
+	std::cout <<std::endl;
+
+
+	// AAnimal* 	b = new AAnimal(); // не работает тк AAnimal - абстрактный класс
 	return (0);
 }

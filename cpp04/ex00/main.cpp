@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dshirely <dshirely@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/25 16:24:18 by dshirely          #+#    #+#             */
+/*   Updated: 2022/09/25 16:24:19 by dshirely         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Dog.hpp"
 #include "Cat.hpp"
 #include "WrongAnimal.hpp"
@@ -31,38 +43,43 @@ int main()
     std::cout << std::endl;
     std::cout << std::endl;
 
-    Animal		Titi;
-	Dog			Idefix;
-	Cat			Garfield;
-	WrongAnimal	Coffee;
-	WrongCat	Grosminet;
+    Animal		Animal;
+	Dog			Persik;
+	Cat			Marusya;
+	WrongAnimal	Shvabra;
+	WrongCat	Dikobraz;
 
 	std::cout << std::endl;
 
-	std::cout << Titi.getType() << std::endl;
-	Titi.makeSound();
+	std::cout << Animal.getType() << std::endl;
+	Animal.makeSound();
 
 	std::cout << std::endl;
 
-	std::cout << Idefix.getType() << std::endl;
-	Idefix.makeSound();
+	std::cout << Persik.getType() << std::endl;
+	Persik.makeSound();
 
 	std::cout << std::endl;
 
-	std::cout << Garfield.getType() << std::endl;
-	Garfield.makeSound();
+	std::cout << Marusya.getType() << std::endl;
+	Marusya.makeSound();
 
 	std::cout << std::endl;
 
-	std::cout << Coffee.getType() << std::endl;
-	Coffee.makeSound();
+	std::cout << Shvabra.getType() << std::endl;
+	Shvabra.makeSound();
 
 	std::cout << std::endl;
 
-	std::cout << Grosminet.getType() << std::endl;
-	Grosminet.makeSound();
+	std::cout << Dikobraz.getType() << std::endl;
+	Dikobraz.makeSound();
 
 	std::cout << std::endl;
+	std::cout << std::endl;
+	
+	WrongAnimal A = Dikobraz;
+	std::cout << Dikobraz.getType() << std::endl;
+	A.makeSound();
 
 
     return 0;

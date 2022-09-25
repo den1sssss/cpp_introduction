@@ -1,4 +1,15 @@
-// #include "Animal.hpp"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dshirely <dshirely@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/25 16:25:10 by dshirely          #+#    #+#             */
+/*   Updated: 2022/09/25 16:27:33 by dshirely         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Dog.hpp"
 
 Dog::Dog()
@@ -24,8 +35,6 @@ Dog::Dog(const Dog &src)
 
 Dog & Dog::operator=(const Dog &arg)
 {
-    // if(this != &arg)
-    //     this->type=arg.type;
     this->type=arg.getType();
     this->DogBrain = new Brain();
     *(this->DogBrain) = *(arg.DogBrain);
@@ -33,10 +42,6 @@ Dog & Dog::operator=(const Dog &arg)
     return(*this);
 }
 
-// std::string Dog::getType() const
-// {
-    // return type;
-// }
 void Dog::makeSound() const
 {
     std::cout << "woof!"<<std::endl;

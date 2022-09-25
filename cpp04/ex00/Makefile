@@ -1,4 +1,16 @@
-CFLAGS		= -Wall -Wextra -Werror -std=c++98
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: dshirely <dshirely@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/09/25 16:24:19 by dshirely          #+#    #+#              #
+#    Updated: 2022/09/25 16:24:20 by dshirely         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+CFLAGS		= -Wall -Wextra -Werror -std=c++98 -fsanitize=address
 CC			= c++
 RM			= rm -f
 OBJ			= ${SRC:.cpp=.o}

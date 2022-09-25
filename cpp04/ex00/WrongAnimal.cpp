@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dshirely <dshirely@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/25 16:24:21 by dshirely          #+#    #+#             */
+/*   Updated: 2022/09/25 16:24:21 by dshirely         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "WrongAnimal.hpp"
 
 WrongAnimal::WrongAnimal(): type("WrongAnimal")
@@ -18,8 +30,6 @@ WrongAnimal::WrongAnimal(const WrongAnimal &src)
 
 WrongAnimal & WrongAnimal::operator=(const WrongAnimal &arg)
 {
-    // if(this != &arg)
-    //     this->type=arg.type;
     this->type=arg.getType();
     std::cout <<"WrongAnimal copy assigment operator" << std::endl;
     return(*this);

@@ -12,8 +12,9 @@
 
 #include "Animal.hpp"
 
-Animal::Animal() : type("Animal")
+Animal::Animal() 
 {
+    type = "Animal";
     std::cout << "Animal default constructor" << std::endl;
 }
 
@@ -30,8 +31,6 @@ Animal::Animal(const Animal &src)
 
 Animal & Animal::operator=(const Animal &arg)
 {
-    // if(this != &arg)
-    //     this->type=arg.type;
     this->type=arg.getType();
     std::cout <<"Animal copy assigment operator" << type << std::endl;
     return(*this);

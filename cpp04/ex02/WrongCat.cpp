@@ -1,4 +1,15 @@
-// #include "Animal.hpp"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dshirely <dshirely@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/25 16:25:27 by dshirely          #+#    #+#             */
+/*   Updated: 2022/09/25 16:27:42 by dshirely         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "WrongCat.hpp"
 
 WrongCat::WrongCat()
@@ -20,17 +31,11 @@ WrongCat::WrongCat(const WrongCat &src)
 
 WrongCat & WrongCat::operator=(const WrongCat &arg)
 {
-    // if(this != &arg)
-    //     this->type=arg.type;
     this->type=arg.getType();
     std::cout <<"WrongCat copy assigment operator" << type << std::endl;
     return(*this);
 }
 
-// std::string WrongCat::getType() const
-// {
-    // return type;
-// }
 void WrongCat::makeSound() const
 {
     std::cout << "Cat's wrong sound!"<<std::endl;

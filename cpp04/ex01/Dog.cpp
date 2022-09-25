@@ -1,4 +1,15 @@
-// #include "Animal.hpp"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dshirely <dshirely@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/25 16:24:36 by dshirely          #+#    #+#             */
+/*   Updated: 2022/09/25 16:27:06 by dshirely         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Dog.hpp"
 
 Dog::Dog()
@@ -24,19 +35,13 @@ Dog::Dog(const Dog &src)
 
 Dog & Dog::operator=(const Dog &arg)
 {
-    // if(this != &arg)
-    //     this->type=arg.type;
     this->type=arg.getType();
     this->DogBrain = new Brain();
     *(this->DogBrain) = *(arg.DogBrain);
-    std::cout <<"Dog copy assigment operator" << this->type << std::endl;
+    std::cout <<"Dog copy assigment operator = " << this->type << std::endl;
     return(*this);
 }
 
-// std::string Dog::getType() const
-// {
-    // return type;
-// }
 void Dog::makeSound() const
 {
     std::cout << "woof!"<<std::endl;

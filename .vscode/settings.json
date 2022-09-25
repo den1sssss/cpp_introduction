@@ -49,6 +49,12 @@
         "new": "cpp",
         "ratio": "cpp",
         "stdexcept": "cpp",
-        "type_traits": "cpp"
+        "type_traits": "cpp",
+        "__node_handle": "cpp",
+        "__tree": "cpp",
+        "cmath": "cpp",
+        "iomanip": "cpp",
+        "map": "cpp",
+        "optional": "cpp"
     }
 }
