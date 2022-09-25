@@ -1,4 +1,15 @@
-// #include "Animal.hpp"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dshirely <dshirely@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/25 16:24:33 by dshirely          #+#    #+#             */
+/*   Updated: 2022/09/25 16:27:01 by dshirely         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Cat.hpp"
 
 Cat::Cat()
@@ -24,8 +35,6 @@ Cat::Cat(const Cat &src)
 
 Cat & Cat::operator=(const Cat &arg)
 {
-    // if(this != &arg)
-    //     this->type=arg.type;
     this->type=arg.getType();
     this->CatBrain = new Brain();
     *(this->CatBrain) = *(arg.CatBrain);
@@ -33,10 +42,6 @@ Cat & Cat::operator=(const Cat &arg)
     return(*this);
 }
 
-// std::string Cat::getType() const
-// {
-    // return type;
-// }
 void Cat::makeSound() const
 {
     std::cout << "meow!"<<std::endl;

@@ -6,7 +6,7 @@
 /*   By: dshirely <dshirely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 17:38:22 by dshirely          #+#    #+#             */
-/*   Updated: 2022/09/07 15:44:56 by dshirely         ###   ########.fr       */
+/*   Updated: 2022/09/25 16:24:28 by dshirely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,6 @@ Animal::Animal(const Animal &src)
 
 Animal & Animal::operator=(const Animal &arg)
 {
-    // if(this != &arg)
-    //     this->type=arg.type;
     this->type=arg.getType();
     std::cout <<"Animal copy assigment operator" << type << std::endl;
     return(*this);
