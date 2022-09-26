@@ -2,8 +2,8 @@ CFLAGS		= -Wall -Wextra -Werror -std=c++98
 CC			= c++
 RM			= rm -f
 OBJ			= ${SRC:.cpp=.o}
-SRC			= main.cpp Bureaucrat.cpp Form.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp 
-INC			= Bureaucrat.hpp Form.hpp PresidentialPardonForm.hpp RobotomyRequestForm.hpp ShrubberyCreationForm.hpp
+SRC			= main.cpp Bureaucrat.cpp Form.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp Intern.cpp
+INC			= Bureaucrat.hpp Form.hpp PresidentialPardonForm.hpp RobotomyRequestForm.hpp ShrubberyCreationForm.hpp Intern.hpp
 
 NAME		= Bureaucrat
 
