@@ -1,53 +1,14 @@
-// #include "Bureaucrat.hpp"
-
-// int main()
-// {
-//     try
-//     {
-//         Bureaucrat bur1("Denis",1);
-//         Bureaucrat bur2("Andrew", 50);
-
-//         bur1.decrease();
-//         std::cout << bur1 << std::endl;
-
-//         bur2.increase();
-//         std::cout << bur2 << std::endl;
-
-
-//         Bureaucrat bur3("Aboba",0);
-//         std::cout << bur3 << std::endl;
-
-//         Bureaucrat bur4("Nedoidet",12);
-//         std::cout << bur4 << std::endl;
-
-//     }
-//     catch(const std::exception& e)
-//     {
-//         std::cerr << e.what() << std::endl;
-//     }
-
-       
-// // }
-// #include "Form.hpp"
-// #include "Bureaucrat.hpp"
-
-// int main(void) {
-//     try {
-//         Form f1 = Form("form1", 10, 5);
-//         Bureaucrat b1 = Bureaucrat("Bob", 30);
-//         Bureaucrat b2 = Bureaucrat("Jhon", 1);
-
-//         std::cout << f1 << std::endl;
-
-//         b1.signForm(f1);
-//         b2.signForm(f1);
-
-//         Form f2 = Form("from2", 0, 5);
-//     }
-//     catch (std::exception & e) {
-//         std::cout << "Exception: " << e.what() << std::endl;
-//     }
-// }
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dshirely <dshirely@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/26 20:25:50 by dshirely          #+#    #+#             */
+/*   Updated: 2022/09/26 20:25:51 by dshirely         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 # include "Bureaucrat.hpp"
 # include "PresidentialPardonForm.hpp"
@@ -57,7 +18,7 @@
 
 int main(void)
 {
-	// srand(time(NULL));
+	srand(time(NULL));
 	try
 	{
 		Bureaucrat				louisa("Louisa", 5); // sign and execute
@@ -75,7 +36,7 @@ int main(void)
 		std::cout << presidential1 << std::endl;
 		std::cout << presidential2 << std::endl;
 		std::cout << presidential3 << std::endl;
-		std::cout << std::endl;
+		std::cout << std::endl;	
 		
 		louisa.signForm(presidential1);
 		louisa.executeForm(presidential1);
@@ -89,7 +50,7 @@ int main(void)
 		victoria.executeForm(presidential3);
 		std::cout << std::endl;
 		
-		sarah.increase();
+		sarah.decrease();
 		sarah.signForm(presidential2);
 		std::cout << std::endl;
 	}
@@ -97,6 +58,7 @@ int main(void)
 	{
 		std::cout << e.what() << std::endl;
 	}
+	std::cout << "---------------"<<std::endl;
 	try
 	{
 		std::cout << std::endl;
@@ -133,7 +95,7 @@ int main(void)
 	{
 		std::cout << e.what() << std::endl;
 	}
-	std::cout << std::endl;
+	std::cout << "---------------"<<std::endl;
 	try
 	{
 		std::cout << std::endl;

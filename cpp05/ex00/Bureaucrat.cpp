@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dshirely <dshirely@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/26 20:25:22 by dshirely          #+#    #+#             */
+/*   Updated: 2022/09/26 20:25:23 by dshirely         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Bureaucrat.hpp"
 
 Bureaucrat::Bureaucrat()
@@ -36,12 +48,16 @@ int Bureaucrat::getGrade() const
 
 void Bureaucrat::increase()
 {
-    grade++;
+    grade--;
+    if(this->grade < 1)
+        throw GradeTooHighException();
 }
 
 void Bureaucrat::decrease()
 {
-    grade--;
+    grade++;
+    if(this->grade > 150)
+        throw GradeTooLowException();
 }
 
 const char *Bureaucrat::GradeTooHighException::what() const throw()

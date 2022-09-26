@@ -1,48 +1,32 @@
-// #include "Bureaucrat.hpp"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dshirely <dshirely@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/26 20:25:39 by dshirely          #+#    #+#             */
+/*   Updated: 2022/09/26 20:25:40 by dshirely         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-// int main()
-// {
-//     try
-//     {
-//         Bureaucrat bur1("Denis",1);
-//         Bureaucrat bur2("Andrew", 50);
-
-//         bur1.decrease();
-//         std::cout << bur1 << std::endl;
-
-//         bur2.increase();
-//         std::cout << bur2 << std::endl;
-
-
-//         Bureaucrat bur3("Aboba",0);
-//         std::cout << bur3 << std::endl;
-
-//         Bureaucrat bur4("Nedoidet",12);
-//         std::cout << bur4 << std::endl;
-
-//     }
-//     catch(const std::exception& e)
-//     {
-//         std::cerr << e.what() << std::endl;
-//     }
-
-       
-// }
 #include "Form.hpp"
 #include "Bureaucrat.hpp"
 
 int main(void) {
     try {
-        Form f1 = Form("form1", 10, 5);
-        Bureaucrat b1 = Bureaucrat("Bob", 30);
-        Bureaucrat b2 = Bureaucrat("Jhon", 1);
+        Form f1 = Form("Form1", 10, 5);
+        Bureaucrat b1 = Bureaucrat("Ivan", 30);
+        Bureaucrat b2 = Bureaucrat("Denis", 1);
 
         std::cout << f1 << std::endl;
 
         b1.signForm(f1);
+        std::cout<<std::endl;
         b2.signForm(f1);
+        std::cout<<std::endl;
 
-        Form f2 = Form("from2", 0, 5);
+        Form f2 = Form("Form2", 0, 5);
     }
     catch (std::exception & e) {
         std::cout << "Exception: " << e.what() << std::endl;

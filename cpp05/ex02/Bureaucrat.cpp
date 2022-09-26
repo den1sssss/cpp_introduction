@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dshirely <dshirely@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/26 20:25:43 by dshirely          #+#    #+#             */
+/*   Updated: 2022/09/26 20:25:44 by dshirely         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
 
@@ -37,13 +49,18 @@ int Bureaucrat::getGrade() const
 
 void Bureaucrat::increase()
 {
-    grade++;
+    grade--;
+    if(this->grade < 1)
+        throw GradeTooHighException();
 }
 
 void Bureaucrat::decrease()
 {
-    grade--;
+    grade++;
+    if(this->grade > 150)
+        throw GradeTooLowException();
 }
+
 
 const char *Bureaucrat::GradeTooHighException::what() const throw()
 {
@@ -63,7 +80,7 @@ void Bureaucrat::signForm(Form &src)
     try
     {
         src.beSigned(*this);
-        std::cout << name << "signed " << src.getName() <<std::endl;
+        std::cout << name << " signed " << src.getName() <<std::endl;
     }
     catch(const std::exception& e)
     {

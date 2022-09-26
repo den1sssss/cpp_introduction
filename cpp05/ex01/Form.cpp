@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Form.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dshirely <dshirely@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/26 20:25:36 by dshirely          #+#    #+#             */
+/*   Updated: 2022/09/26 20:25:37 by dshirely         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Form.hpp"
 Form::Form()
 {
@@ -37,22 +49,6 @@ std::string const Form::getName() const
 {
     return name;
 }
-
-// int Form::getGrade() const
-// {
-//     return grade;
-// }
-
-// void Form::increase()
-// {
-//     grade++;
-// }
-
-// void Form::decrease()
-// {
-//     grade--;
-// }
-
 int Form::getGradeSignature() const
 {
     return gradeToSign;

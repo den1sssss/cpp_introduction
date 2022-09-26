@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Intern.cpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dshirely <dshirely@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/26 20:26:10 by dshirely          #+#    #+#             */
+/*   Updated: 2022/09/26 20:26:10 by dshirely         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Intern.hpp"
 
 
@@ -46,7 +58,7 @@ Form *Intern::makeForm(std::string name, std::string const target)
              return(new ShrubberyCreationForm(target));
             break;
         default:
-            std::cout << "Intern creates " << name << " to " << target <<std::endl;
+            std::cout << "Intern is trying to create " << name << " to " << target <<std::endl;
             throw Intern::InternCannotCreateForm();
             break;
     }

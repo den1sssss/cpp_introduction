@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dshirely <dshirely@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/26 20:25:56 by dshirely          #+#    #+#             */
+/*   Updated: 2022/09/26 20:25:56 by dshirely         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "RobotomyRequestForm.hpp"
 
 RobotomyRequestForm::RobotomyRequestForm() 
@@ -37,7 +49,7 @@ void RobotomyRequestForm::execute(Bureaucrat const &exec) const
 	if (exec.getGrade() <= getGradeExecute())
 	{
 		number = rand() % 100;
-		std::cout << "~drilling~" << std::endl;
+		std::cout << "~(±_±)drilling(±_±)~" << std::endl;
 		if (number % 2)
 			std::cout << exec.getName() << " has been robotomised ..." << std::endl;
 		else
