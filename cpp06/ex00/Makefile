@@ -5,7 +5,7 @@ OBJ			= ${SRC:.cpp=.o}
 SRC			= main.cpp Convert.cpp
 INC			= Convert.hpp
 
-NAME		= Bureaucrat
+NAME		= killme
 
 ${NAME}:	${OBJ}
 					${CC} ${CFLAGS} ${OBJ} -o $@

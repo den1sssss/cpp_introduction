@@ -2,6 +2,8 @@
 # define CONVERT_HPP
 
 #include <iostream>
+// #include <limits>
+#include <cmath>
 
 
 class Convert
@@ -21,9 +23,9 @@ class Convert
         void toFloat() const ;
         void toDouble() const;
 
-        void convert(const std::string &src) const;
+        void convert(const std::string &name) const;
 
-        typedef void(Convert::*f)() const;
+        typedef void(Convert::*func)() const;
        	class notDisplayable: public std::exception
         {
 		    public:
