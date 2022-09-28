@@ -3,9 +3,9 @@ CC			= c++
 RM			= rm -f
 OBJ			= ${SRC:.cpp=.o}
 SRC			= main.cpp 
-INC			= main.hpp
+INC			= Base.hpp
 
-NAME		= Serialization
+NAME		= Base
 
 ${NAME}:	${OBJ}
 					${CC} ${CFLAGS} ${OBJ} -o $@

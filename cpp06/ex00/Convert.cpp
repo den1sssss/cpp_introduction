@@ -84,7 +84,7 @@ void Convert::convert(const std::string &name) const
             {
                 (this->*(function[i]))();
             }
-            catch(const std::exception& e)
+            catch(const std::exception& e) 
             {
                 std::cerr << e.what() << '\n';
             }
