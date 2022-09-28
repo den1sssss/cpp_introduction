@@ -1,10 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Convert.hpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dshirely <dshirely@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/28 14:21:02 by dshirely          #+#    #+#             */
+/*   Updated: 2022/09/28 14:22:46 by dshirely         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef CONVERT_HPP
 # define CONVERT_HPP
 
 #include <iostream>
-// #include <limits>
 #include <cmath>
-
+#include <limits>
 
 class Convert
 {

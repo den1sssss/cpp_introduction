@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dshirely <dshirely@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/28 14:21:11 by dshirely          #+#    #+#             */
+/*   Updated: 2022/09/28 14:21:12 by dshirely         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "main.hpp"
 
 int main(void)
@@ -6,20 +18,15 @@ int main(void)
     Data *deserial;
     uintptr_t serial;
 
-    data.digital = 42;
     data.str = "aboba";
     std::cout <<"Data adress: "<< &data << std::endl;
-    std::cout <<"Data values:"<<std::endl;
-    std::cout <<"Digit: " << data.digital <<std::endl;
     std::cout <<"String: " << data.str <<std::endl;
 
     serial = serialize(&data);
-
     deserial = deserialize(serial);
-    std::cout <<"New adress: " << &data <<std::endl;
-    std::cout <<"Data values:"<<std::endl;
-    std::cout <<"Digit: " << data.digital <<std::endl;
-    std::cout <<"String: " << data.str <<std::endl;
+    
+    std::cout <<"New adress: " << deserial <<std::endl;
+    std::cout <<"String: " << deserial->str <<std::endl;
 
     return (0);
 }

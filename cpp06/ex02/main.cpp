@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dshirely <dshirely@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/28 14:21:19 by dshirely          #+#    #+#             */
+/*   Updated: 2022/09/28 14:21:20 by dshirely         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Base.hpp"
 
-Base	*generate(void){
+Base	*create(void){
 	srand(time(NULL));
 	switch (rand() % 3){
 		case 0:
@@ -29,23 +41,29 @@ void identify(Base* p){
 }
 
 void identify(Base &base) {
-	try {
+	try 
+    {
 		(void)dynamic_cast<A&>(base);
 		std::cout << "A" << std::endl;
-	} catch (const std::exception &e) {}
-	try {
+	} 
+    catch (const std::exception &e) {}
+	try 
+    {
 		(void)dynamic_cast<B&>(base);
 		std::cout << "B" << std::endl;
-	} catch (const std::exception &e) {}
-	try {
+	} 
+    catch (const std::exception &e) {}
+	try 
+    {
 		(void)dynamic_cast<C&>(base);
 		std::cout << "C" << std::endl;
-	} catch (const std::exception &e) {}
+	} 
+    catch (const std::exception &e) {}
 }
 
 int main()
 {
-	Base* obj = generate();
+	Base* obj = create();
 	std::cout << "Pointer: ";
 	identify(obj);
 	std::cout << "Adress: ";

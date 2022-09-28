@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Convert.cpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dshirely <dshirely@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/28 14:20:59 by dshirely          #+#    #+#             */
+/*   Updated: 2022/09/28 14:23:42 by dshirely         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Convert.hpp"
 
 Convert::Convert(){}
@@ -54,7 +66,7 @@ void Convert::toFloat() const
         std::cout<<static_cast<float>(num)<<"f"<<std::endl;
     }
 }
-//
+
 void Convert::toDouble() const
 {
     std::cout<<"double: ";
