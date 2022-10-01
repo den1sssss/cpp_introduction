@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   iter.hpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dshirely <dshirely@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/01 17:32:24 by dshirely          #+#    #+#             */
+/*   Updated: 2022/10/01 17:34:21 by dshirely         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef ITER_HPP
 # define ITER_HPP
 #include <iostream>
 #include <string.h>
 
 template<typename T>
-void iter(T *str, int size, void func(T &))
+void iter(T *str, int size, void func(T &a))
 {
     int i = 0;
     while(i<size)
@@ -12,17 +24,16 @@ void iter(T *str, int size, void func(T &))
 }
 
 template< typename T >
-void	iter(T const *str, int size, void func(T const &))
+void	addSpace(T &str)
 {
-    int i = 0;
-    while(i<size)
-        func(str[i++]);
+	std::cout << str << " ";
 }
 
-template< typename T >
-void	printTab(T const &str)
+void toUpper(char &c)
 {
-	std::cout << str << "   ";
+    if(c >=97 && c <= 122) 
+        c-=32;
+    std::cout<< char(c);
 }
 
 #endif

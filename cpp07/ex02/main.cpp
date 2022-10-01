@@ -1,53 +1,82 @@
-#include <iostream>
-#include <Array.hpp>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dshirely <dshirely@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/01 17:32:30 by dshirely          #+#    #+#             */
+/*   Updated: 2022/10/01 17:32:31 by dshirely         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#define MAX_VAL 750
-int main(int, char**)
+#include "Array.hpp"
+
+int main()
 {
-    Array<int> numbers(MAX_VAL);
-    int* mirror = new int[MAX_VAL];
-    srand(time(NULL));
-    for (int i = 0; i < MAX_VAL; i++)
-    {
-        const int value = rand();
-        numbers[i] = value;
-        mirror[i] = value;
-    }
-    //SCOPE
-    {
-        Array<int> tmp = numbers;
-        Array<int> test(tmp);
-    }
+	Array<int> arr_int(10);
+	try
+	{
+        std::cout << arr_int[5] << std::endl;
+		std::cout << arr_int[12] << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
 
-    for (int i = 0; i < MAX_VAL; i++)
-    {
-        if (mirror[i] != numbers[i])
-        {
-            std::cerr << "didn't save the same value!!" << std::endl;
-            return 1;
-        }
-    }
-    try
-    {
-        numbers[-2] = 0;
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << '\n';
-    }
-    try
-    {
-        numbers[MAX_VAL] = 0;
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << '\n';
-    }
+	std::cout << std::endl;
+    std::cout << std::endl;
 
-    for (int i = 0; i < MAX_VAL; i++)
-    {
-        numbers[i] = rand();
-    }
-    delete [] mirror;//
-    return 0;
+	unsigned int i = 0;
+	Array<char> arr_char(10);
+	for(i = 0; i < arr_char.size(); i++)
+		arr_char[i] = 'A' + i;
+	try
+	{
+	    for(i = 0; i < arr_char.size(); i++)
+		    std::cout << arr_char[i] << " = arr[" << i << "]" <<std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+
+    std::cout << std::endl;
+    std::cout << std::endl;
+
+	i = 0;
+	Array<double> arr_double(10);
+	for(i = 0; i < arr_double.size(); i++)
+		arr_double[i] = (rand() % 100)+0.05;
+	try
+	{
+		for(i = 0; i < arr_double.size(); i++)
+			std::cout << arr_double[i] << " = arr[" << i << "]" <<std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+
+	std::cout << std::endl;
+    std::cout << std::endl;
+
+    try
+	{
+        Array<std::string> arr_string(2);
+		
+	    arr_string[0] = "hello";
+	    arr_string[1] = "world";
+		Array<std::string> arr_str_copy(arr_string);
+		std::cout << "String: " << arr_string[0] << ' ' << arr_string[1] << std::endl;
+		std::cout << "Copy: " << arr_str_copy[0] << ' ' << arr_str_copy[1] << std::endl;
+		std::cout << arr_string[5] << std::endl;
+	}
+    catch(const std::exception& e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	return (0);
 }
+

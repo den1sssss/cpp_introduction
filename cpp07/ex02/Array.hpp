@@ -1,7 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Array.hpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dshirely <dshirely@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/01 17:32:29 by dshirely          #+#    #+#             */
+/*   Updated: 2022/10/01 17:32:29 by dshirely         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef ARRAY_HPP
 # define ARRAY_HPP
 
 #include <exception>
+#include <iostream>
 
 template<typename T>
 class Array
@@ -17,12 +30,11 @@ class Array
                 delete [] array;
         };
 
-        Array(Array const &src)
+        Array(Array &src) : array(new T[src.len]),len(src.len)
         {
-            len = src.len;
-            for(int i = 0;i < len; i++)
-                array[i]=src.array[i];
-        };
+	        for(unsigned int i = 0; i < src.len; i++)
+		        array[i] = src.array[i];
+        }
 
         Array(unsigned int n)
         {
@@ -32,12 +44,16 @@ class Array
 
         Array &operator=(Array const &src)
         {
-            // 
-        };
+            array = src.array;
+            len = src.len;
+            return (*this);
+        }; 
 
         T &operator[](unsigned int ind)
         {
-                // 
+            if(ind < 0 || ind > len)
+                throw OutOfRange();
+            return(array[ind]);
         };
 
         unsigned int size()
@@ -50,9 +66,9 @@ class Array
             public :
 				virtual const char* what() const throw()
 				{
-					return ("ArrayException: index out of range");
+					return ("Exception: index out of range");
                 }
-        }
+        };
 };
 
 

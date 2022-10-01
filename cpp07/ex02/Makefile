@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: dshirely <dshirely@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/10/01 17:32:32 by dshirely          #+#    #+#              #
+#    Updated: 2022/10/01 17:32:33 by dshirely         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 CFLAGS		= -Wall -Wextra -Werror -std=c++98
 CC			= c++
 RM			= rm -f
@@ -5,7 +17,7 @@ OBJ			= ${SRC:.cpp=.o}
 SRC			= main.cpp 
 INC			= Array.hpp
 
-NAME		= Base
+NAME		= Array
 
 ${NAME}:	${OBJ}
 					${CC} ${CFLAGS} ${OBJ} -o $@
