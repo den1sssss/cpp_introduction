@@ -5,7 +5,7 @@ OBJ			= ${SRC:.cpp=.o}
 SRC			= main.cpp Span.cpp
 INC			= Span.hpp
 
-NAME		= Base
+NAME		= Span
 
 ${NAME}:	${OBJ}
 					${CC} ${CFLAGS} ${OBJ} -o $@

@@ -5,7 +5,7 @@ OBJ			= ${SRC:.cpp=.o}
 SRC			= main.cpp 
 INC			= MutantStack.hpp
 
-NAME		= Base
+NAME		= MutantStack
 
 ${NAME}:	${OBJ}
 					${CC} ${CFLAGS} ${OBJ} -o $@

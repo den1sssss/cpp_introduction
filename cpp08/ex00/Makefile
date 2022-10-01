@@ -5,7 +5,7 @@ OBJ			= ${SRC:.cpp=.o}
 SRC			= main.cpp 
 INC			= easyfind.hpp
 
-NAME		= Base
+NAME		= easyfind
 
 ${NAME}:	${OBJ}
 					${CC} ${CFLAGS} ${OBJ} -o $@
