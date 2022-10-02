@@ -8,7 +8,9 @@
 class Span
 {
     private:
-
+        std::vector<int> vector;
+        unsigned int size;
+        unsigned int i;
     public:
         Span();
         Span(unsigned int N);
@@ -16,14 +18,19 @@ class Span
         Span(const Span &src);
         Span &operator=(const Span &src);
 
-        void addNumber(int n);
         int shortestSpan(void);
-        int longestSpan(void);
+        // int longestSpan(void);
         class NotEnoughSpace : public std::exception
         {
             public:
                 virtual const char* what() const throw();
         };
+        class LessThanTwo : public std::exception
+        {
+            public:
+                virtual const char* what() const throw();
+        };
+        void addNumber(int n);
         void addNumber(std::vector<int>::iterator begin, std::vector<int>::iterator end);
 };
 
