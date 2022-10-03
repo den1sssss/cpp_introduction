@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Span.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dshirely <dshirely@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/03 14:10:50 by dshirely          #+#    #+#             */
+/*   Updated: 2022/10/03 14:10:50 by dshirely         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Span.hpp"
 
 Span::Span() : vector(std::vector<int>()), size(0), i(0)
@@ -9,12 +21,9 @@ Span::~Span()
 {
 
 }
-Span::Span(unsigned int N)
+Span::Span(unsigned int N) : vector(std::vector<int>()), size(N), i (0) 
 {
-    if(N <= 1)
-        throw  LessThanTwo();
-    vector = std::vector<int>();
-    i = 0;
+    
 }
 Span::Span(const Span &src)
 {
@@ -25,9 +34,6 @@ Span::Span(const Span &src)
 }
 Span &Span::operator=(const Span &src)
 {
-    // vector = src.vector;
-    // size = src.size;
-    // i = src.i;
     vector = std::vector<int>(src.vector);
     return *this;
 }
@@ -64,10 +70,29 @@ int Span::shortestSpan()
     }
     return (result);
 }
-// int Span::longestSpan()
-// {
+int Span::longestSpan()
+{
+    int result;
+    unsigned int j;
+    int diff;
 
-// }
+    if(size < 2)
+        throw LessThanTwo();
+    result = 0;
+    std::sort(vector.begin(),vector.end());
+    for(unsigned int i = size - 1; i > 0; i--)
+    {
+        for(j = i; j > 0; j--)
+        {
+            diff = vector[i] - vector[j - 1];
+            if(diff < 0)
+                diff*=-1;
+            if(diff > result)
+                result = diff;
+        }
+    }
+    return (result);
+}
 void Span::addNumber(std::vector<int>::iterator begin, std::vector<int>::iterator end)
 {
     for(std::vector<int>::iterator iter = begin; iter != end; iter++)

@@ -1,65 +1,87 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dshirely <dshirely@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/03 14:10:43 by dshirely          #+#    #+#             */
+/*   Updated: 2022/10/03 14:31:09 by dshirely         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "easyfind.hpp"
 
 int main(void)
 {
-    std::vector<int> vInt(3);
-	std::vector<int> vInt2(10, 95); // 10 values initialize at 2
-	std::list<int> lInt;
-	std::vector<char> vChar(4);
-	std::list<int> lChar(4);
+    std::vector<int> vect1(5);
+	std::vector<int> vect2(10, 95); 
+	std::list<int> list1;
+	std::vector<char> vec_char(4);
+	std::list<int> list_char(4);
+
+	vect1.push_back(1);
+	vect1.push_back(2);
+	vect1.push_back(3);
+	vect1.push_back(4);
+	vect1.push_back(5);
+
+	list1.push_back(14);
+	list1.push_back(15);
+
+	vec_char.push_back('a');
+	vec_char.push_back('b');
+	vec_char.push_back('o');
+	vec_char.push_back('b');
+	vec_char.push_back('a');
+
 	
-	vInt[0] = 14;
-	vInt[1] = 28;
-	vInt[2] = 35;
-	lInt.push_back(14);
-	lInt.push_back(15);
-	vChar[0] = 'h';
-	vChar[1] = 'e';
-	vChar[2] = 'l';
-	vChar[3] = 'l';
-	lChar.push_back('b');
-	lChar.push_back('e');
-	lChar.push_back('e');
-	lChar.push_back('s');
-	std::cout << "--------------- Find int : vector ---------------" << std::endl;
+	list_char.push_back('a');
+	list_char.push_back('b');
+	list_char.push_back('c');
+	list_char.push_back('d');
+
 	try
 	{
-		easyfind(vInt, 35);
-		easyfind(vInt2, 95);
-		easyfind(vInt, 15);
+		easyfind(vect1, 1);
+		easyfind(vect2, 95);
+		easyfind(vect1, 15);
 	}
 	catch(const std::exception& e)
 	{
 		std::cerr << e.what() << '\n';
 	}
-	std::cout << std::endl;
-	std::cout << "--------------- Find char : vector ---------------" << std::endl;
+
+	std::cout << "--------------" << std::endl;
+	
 	try
 	{
-		easyfind(vChar, 'e');
-		easyfind(vChar, 'f');
+		easyfind(vec_char, 'a');
+		easyfind(vec_char, 'r');
 	}
 	catch(const std::exception& e)
 	{
 		std::cerr << e.what() << '\n';
 	}
-	std::cout << std::endl;
-	std::cout << "--------------- Find int : list ---------------" << std::endl;
+
+	std::cout << "--------------" << std::endl;
+
 	try
 	{
-		easyfind(lInt, 14);
-		easyfind(lInt, 16);
+		easyfind(list1, 14);
+		easyfind(list1, 16);
 	}
 	catch(const std::exception& e)
 	{
 		std::cerr << e.what() << '\n';
 	}
-	std::cout << std::endl;
-	std::cout << "--------------- Find char : list ---------------" << std::endl;
+
+	std::cout << "--------------" << std::endl;
+	
 	try
 	{
-		easyfind(lChar, 'b');
-		easyfind(lChar, 'o');
+		easyfind(list_char, 'a');
+		easyfind(list_char, 'r');
 	}
 	catch(const std::exception& e)
 	{

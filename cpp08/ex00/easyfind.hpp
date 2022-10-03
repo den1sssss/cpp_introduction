@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   easyfind.hpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dshirely <dshirely@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/03 14:10:41 by dshirely          #+#    #+#             */
+/*   Updated: 2022/10/03 14:10:42 by dshirely         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef EASYFIND_HPP
 # define EASYFIND_HPP
 
@@ -28,7 +40,6 @@ void easyfind(T container, int n)
     i = std::find(container.begin(), container.end(), n);
     if(i == container.end())
         throw ValueNotFound();
-        // std::cout <<"Value not found!"<<std::endl;
     else
         std::cout <<"Value ["<< n << "] found!" << std::endl;
 }
